@@ -56,6 +56,6 @@ window.addEventListener('resize', function(e){
 
 //identifica a imagem clicada e puxa para frente
 window.addEventListener("pointerdown", function(e){
-  lightBoard.pushSpriteToFront(e);
+  lightBoard.pushPlaneToFront(e);
 });
 
