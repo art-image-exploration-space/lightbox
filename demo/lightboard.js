@@ -18,11 +18,11 @@ class LightBoard {
         this.scene = new THREE.Scene();
         this.camera = new THREE.PerspectiveCamera(this.cameraSettings.fov, this.cameraSettings.aspect, this.cameraSettings.near, this.cameraSettings.far);
         this.renderer = new THREE.WebGLRenderer(this.webGLRendererSettings);
+        this.renderer.physicallyCorrectLights = true;
+        this.renderer.setPixelRatio(2)
         this.dragConstrols = new THREE.DragControls(this.planes, this.camera, this.renderer.domElement);
         this.transformControls = new THREE.TransformControls(this.camera, this.renderer.domElement);
         this.transformControls.setMode("rotate");
-        this.transformControls.showX = false;
-        this.transformControls.showY = false;
         let dragControl = this.dragConstrols;
         this.transformControls.addEventListener('dragging-changed', function (event) {
             dragControl.enabled = !event.value

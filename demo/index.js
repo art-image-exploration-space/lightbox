@@ -6,7 +6,7 @@ const cameraSettings = { fov: 75,
                          position: {x: 0, y: 0, z: 5} };
 
 // colocando o plano de fundo como branco, default é preto                         
-const webGLRendererSettings = { alpha: true };
+const webGLRendererSettings = { alpha: true, antialias: true };
 
 //criando lightBoard
 const settings = {cameraSettings: cameraSettings, webGLRendererSettings: webGLRendererSettings};
